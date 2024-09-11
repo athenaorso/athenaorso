@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATHENA Database</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class = "flex px-5">
+      <hr>
+      <div class = "px-5"><%=link_to "ATHENA", root_path%></div>
+      <div class = "px-5">|</div>  
+      <div class = "px-5"><%=link_to "Search",  search_competitions_path%> </div>
+      <div class = "px-5">|</div>
+      <div class = "px-5"><%=link_to "About",  about_path%></div>
+      <hr>
+      
+    </div>
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
+    </main>
+  </body>
+</html>
